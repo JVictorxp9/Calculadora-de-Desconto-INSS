@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Digite a sua Matrícula: ");
+        int matricula = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Digite o seu nome completo: ");
+        String nome = sc.nextLine();
+
+        System.out.println("Informe seu salário bruto: ");
+        double salarioBruto = sc.nextDouble();
+
+
+        Pessoa pessoa = new Pessoa(matricula, nome, salarioBruto);
+        pessoa.exibirDados();
+
+        sc.close();
+    }
+}
+
