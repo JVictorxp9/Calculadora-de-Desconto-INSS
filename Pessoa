@@ -1,0 +1,58 @@
+public class Pessoa {
+
+    protected String nome;
+    protected int matricula;
+    protected double salarioBruto;
+    protected double inss;
+    protected double salarioComDesconto;
+
+    public Pessoa(int matricula, String nome, double salarioBruto) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.salarioBruto = salarioBruto;
+        this.inss = salarioBruto * 0.15;
+        this.salarioComDesconto = salarioBruto - inss;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getSalarioBruto() {
+        return salarioBruto;
+    }
+
+    public void setSalarioBruto(double salarioBruto) {
+        this.salarioBruto = salarioBruto;
+        this.inss = salarioBruto * 0.15;
+        this.salarioComDesconto = salarioBruto - inss;
+    }
+
+    public double getINSS() {
+        return inss;
+    }
+
+    public double getSalarioComDesconto() {
+        return salarioComDesconto;
+    }
+
+    public void exibirDados() {
+        System.out.println("Matrícula: " + matricula);
+        System.out.println("Nome: " + nome);
+        System.out.println("Salário Bruto: R$" + salarioBruto);
+        System.out.println("Dedução do INSS: R$" + inss);
+        System.out.println("Salário Líquido: R$" + salarioComDesconto);
+    }
+}
